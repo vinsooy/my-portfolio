@@ -1,0 +1,517 @@
+/* =========================================
+   1. GLOBAL RESET & TYPOGRAPHY
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Clean, modern font */
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    color: #000;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   2. LAYOUT CONTAINER
+   ========================================= */
+.container {
+    max-width: 1100px; /* Limits content width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   3. HEADER & NAVIGATION
+   ========================================= */
+.site-header {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-title a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-menu a {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.main-menu a:hover {
+    color: #000;
+}
+
+.main-menu a.active {
+    color: #000;
+    font-weight: 700;
+}
+
+/* =========================================
+   4. HOME PAGE: HERO SECTION
+   ========================================= */
+.home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0 100px;
+    gap: 60px;
+}
+
+.hero-left-text {
+    flex: 1.3;
+}
+
+.hero-right-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumb {
+    display: block;
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.home-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    color: #666;
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1.8;
+    
+    /* JUSTIFY ADDED HERE */
+    text-align: justify; 
+}
+
+/* --- PROFILE PICTURE --- */
+.hero-profile-pic {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* =========================================
+   5. HOME PAGE: WORK EXPERIENCES
+   ========================================= */
+.home-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-heading-center {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.experience-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.job-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+
+.job-logo {
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.job-logo img {
+    max-height: 60px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.job-details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.job-role {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.job-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* =========================================
+   6. HOME PAGE: TOOLS GRID
+   ========================================= */
+.tools-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.tools-grid img {
+    height: 70px;
+    width: auto;
+    opacity: 1;
+    transition: transform 0.3s ease;
+}
+
+.tools-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   7. CALL TO ACTION (SOCIAL LINKS)
+   ========================================= */
+.cta-section {
+    text-align: center;
+    padding: 100px 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-section p {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.social-icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.social-icons-row a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0073aa;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.social-icons-row a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   8. ABOUT PAGE STYLES
+   ========================================= */
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 60px;
+    color: #444;
+}
+
+.about-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+.about-image-container {
+    flex: 1;
+}
+
+.about-image-container img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.about-text-container {
+    flex: 1.5;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.9;
+    
+    /* JUSTIFY ADDED HERE */
+    text-align: justify;
+}
+
+.about-text-container p {
+    margin-bottom: 25px;
+}
+
+.like-buttons, .like-section { margin-top: 30px; }
+.btn-small {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    color: #555;
+    cursor: pointer;
+    margin-right: 8px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =========================================
+   9. PROJECTS PAGE STYLES
+   ========================================= */
+.projects-bio {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 100px;
+    padding-top: 20px;
+}
+
+.bio-text { 
+    flex: 2; 
+    /* JUSTIFY ADDED HERE */
+    text-align: justify;
+}
+
+.section-heading {
+    text-align: center; /* Heading stays centered usually */
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+.bio-text p { margin-bottom: 20px; color: #555; line-height: 1.8; font-size: 0.95rem; }
+
+.bio-image { flex: 1; }
+.bio-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-stack {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project-item {
+    margin-bottom: 80px;
+}
+
+.project-item img {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.caption {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   10. CONTACT PAGE STYLES
+   ========================================= */
+.contact-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 60px;
+    font-size: 0.95rem;
+}
+
+.contact-layout { display: flex; gap: 80px; margin-bottom: 60px; }
+.contact-info { flex: 1; }
+.contact-info h3, .contact-form-container h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.info-block { margin-bottom: 25px; color: #555; font-size: 0.95rem; }
+.contact-link { display: block; color: #000; text-decoration: underline; margin-bottom: 8px; }
+
+.social-circles { display: flex; gap: 10px; margin-top: 30px; }
+.social-circles a {
+    display: flex; justify-content: center; align-items: center;
+    width: 35px; height: 35px;
+    background-color: #0073aa;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+.social-circles a:hover { opacity: 0.8; }
+
+.contact-form-container { flex: 1.2; }
+.contact-form label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 5px; color: #333; }
+.contact-form label span { font-weight: 400; color: #888; font-size: 0.8rem; }
+.contact-form input, .contact-form textarea {
+    width: 100%; padding: 10px; margin-bottom: 20px;
+    border: 1px solid #ddd; border-radius: 2px;
+    background: #fdfdfd; font-family: inherit;
+}
+.btn-blue {
+    background-color: #0073aa;
+    color: white; border: none;
+    padding: 12px 25px;
+    font-size: 0.9rem; font-weight: 600;
+    border-radius: 4px; cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-blue:hover { background-color: #005a87; }
+
+/* =========================================
+   11. DARK FOOTER (ALL PAGES)
+   ========================================= */
+.dark-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 80px 0;
+    margin-top: 50px;
+    font-size: 0.85rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-col h3 { color: #fff; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase; }
+.footer-col h4 { color: #888; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; }
+.footer-sub { color: #aaa; margin-top: 10px; line-height: 1.5; }
+
+.footer-socials { display: flex; flex-direction: column; gap: 12px; }
+.footer-socials a { color: #fff; display: flex; align-items: center; gap: 10px; transition: opacity 0.3s; }
+.footer-socials a:hover { opacity: 0.7; }
+
+/* =========================================
+   12. MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    /* Stack Header */
+    .header-content, .footer-grid {
+        flex-direction: column; text-align: center;
+    }
+    .main-menu ul { justify-content: center; flex-wrap: wrap; gap: 15px; }
+
+    /* Home Hero */
+    .home-hero {
+        flex-direction: column-reverse; /* Image on top */
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-profile-pic {
+        width: 280px; 
+        height: 280px;
+        margin: 0 auto; 
+    }
+    
+    /* Reset Justify on Mobile (Optional: sometimes centered is better on small screens) */
+    .hero-description { 
+        text-align: center; 
+        margin: 0 auto; 
+    }
+
+    /* Work Experience */
+    .job-row { flex-direction: column; text-align: center; gap: 15px; }
+    .job-logo { width: 100%; justify-content: center; }
+
+    /* About, Projects, Contact Stacking */
+    .about-layout, .contact-layout, .projects-bio {
+        flex-direction: column; gap: 30px;
+    }
+    .projects-bio { flex-direction: column-reverse; }
+
+    .about-image-container, .about-text-container, 
+    .contact-info, .contact-form-container, .bio-image, .bio-text {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .bio-image { max-width: 300px; margin: 0 auto; }
+    
+    /* Reset Text Align for mobile readability */
+    .about-text-container, .bio-text {
+        text-align: left; 
+    }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-socials { align-items: center; }
+}
